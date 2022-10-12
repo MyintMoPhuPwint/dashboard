@@ -2,6 +2,8 @@ import { BlankLayout } from "../../layouts/blankLayout";
 import { ErrorPage } from "../../pages/error";
 import { Login } from "./login";
 
+
+
 export const authRoutes = [
     {
         path: 'auth',
