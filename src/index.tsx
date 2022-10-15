@@ -9,9 +9,11 @@ import { ErrorPage } from './pages/error';
 import "primereact/resources/themes/lara-light-indigo/theme.css";  
 import "primereact/resources/primereact.min.css";                  
 import "primeicons/primeicons.css"; 
-import "./assets/styles/app.css";                           
+import "./assets/styles/app.css"; 
+
 import { authRoutes } from './modules/auth/authRoutes';
 import { userRoutes } from './modules/user/userRoutes';
+import { employeeRoute } from './modules/employee/employee.form/route';
 
 const router: any = createBrowserRouter([
   {
@@ -19,7 +21,8 @@ const router: any = createBrowserRouter([
     element: <DefaultLayout />,
     errorElement: <ErrorPage />,
     children: [
-      ...userRoutes
+      ...userRoutes,
+      ...employeeRoute
     ]
   },
 

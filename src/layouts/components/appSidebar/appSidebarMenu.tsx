@@ -3,6 +3,22 @@ import { PanelMenu } from 'primereact/panelmenu';
 
 const items = [
     {
+        label : 'Employee',
+        icon : 'pi pi-fw pi-file',
+        items : [
+            {
+                label : 'Employee-Form',
+                icon : 'pi pi-fw pi-plus',
+                to : '/employee-form'
+            },
+            {
+                label : 'Employee-Job',
+                icon : 'pi pi-fw pi-plus',
+                to : '/employee-job'
+            }
+        ]
+    },
+    {
         label:'File',
         icon:'pi pi-fw pi-file',
         items:[
