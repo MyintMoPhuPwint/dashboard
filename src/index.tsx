@@ -5,12 +5,13 @@ import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { DefaultLayout } from './layouts/defaultLayout';
 import { ErrorPage } from './pages/error';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import "primereact/resources/themes/lara-light-indigo/theme.css";  
-import "primereact/resources/primereact.min.css";                  
+import "primereact/resources/themes/lara-light-indigo/theme.css";
+import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css"
-import '/node_modules/primeflex/primeflex.css'; 
-import "./assets/styles/app.css";                           
+import '/node_modules/primeflex/primeflex.css';
+import "./assets/styles/app.css";
 import { authRoutes } from './modules/auth/authRoutes';
 import { userRoutes } from './modules/user/userRoutes';
 
@@ -32,7 +33,7 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <Provider store={store}> 
+  <Provider store={store}>
     <RouterProvider router={router}></RouterProvider>
   </Provider>
 );
