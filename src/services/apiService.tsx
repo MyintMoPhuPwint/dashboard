@@ -5,13 +5,12 @@ import { http } from "../congfigs/axios";
  * @param {*} error 
  */
  const httpResponseHandler = (error: any) => {
-    
     if(error.response && error.response.status === 0) {
         return;
     }
 
     if(error.response && error.response.status === 401) {
-        localStorage.removeItem('token');
+        // localStorage.removeItem('token');
         // router.push('/auth/login');
         return;
     }
