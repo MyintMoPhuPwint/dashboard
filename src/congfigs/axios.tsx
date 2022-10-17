@@ -9,18 +9,19 @@ import { environment } from "./environment";
     headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
+        "Authorization" : `bearer ${environment.API_KEY}`
     }
 });
-
 /**
  * Http interceptor add authorization token
 */
  api.interceptors.request.use((config: any) => {
-    const token = localStorage.getItem('token') 
-        ? localStorage.getItem('token')
-        : null;
+    
+    // const token = localStorage.getItem('token') 
+    //     ? localStorage.getItem('token')
+    //     : null;
 
-    config.headers.common['Authorization'] = `Bearer ${token}`; 
+    // config.headers.common['Authorization'] = `Bearer ${token}`; 
     return config;
 });
 
