@@ -1,5 +1,3 @@
-
-import { Toolbar } from 'primereact';
 import { Outlet } from 'react-router-dom';
 import { AppSidebar } from './components/appSidebar';
 import { AppTopbar } from './components/appTopbar';
@@ -42,7 +40,7 @@ export const DefaultLayout = () => {
       <AppSidebar />
 
       <div className='grid'>
-        <div className='col-12'>
+        <div className='col-md-12'>
           <Outlet />
         </div>
       </div>

@@ -5,25 +5,20 @@ import { EmployeeTable } from '../lists/table/table';
 export const Employee = () => {
 
   const [data , setData] = useState([]);
-  // const loadingData = async() => {
-  //   await getData().then(
-  //     (data : any) => data,
-  //     error => error
-  //   );
-  //   setData(await getData().then(
-  //     response => response,
-  //     error => error
-  //   ))
-    // setData(response.data.data.data)
-  // }
+  
+  const loadingData = async() => {
+    await getData().then(
+      response => setData(response.data.data.data),
+      error => error
+    );
+  }
 
   useEffect(() => {
-  //  loadingData();
+   loadingData();
   }, [])
   return (
     <div> 
-      {/* <EmployeeTable data={data} /> */}
-      wello
+      <EmployeeTable data={data} />
     </div>
   )
 }
